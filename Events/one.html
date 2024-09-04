@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style="background-color: rgba(0, 0, 0, 0.666); color: aliceblue;">
+    <h2>Amazing images</h2>
+    <div>
+        <ul>
+            <li><img id="photoshop1" class="img" width="100px" height="100px" src="https://media.istockphoto.com/id/1319188329/photo/woman-looking-at-mountains-of-northern-pakistan-from-window-in-the-van.jpg?s=612x612&w=0&k=20&c=NZ8RzZyAAXHOLaJltiWv_BzDxwcymeuzbXMAF8gcC-o=" alt="img" ></li>
+            <li><img id="photoshop2" class="img" width=100px" height="100px"  src="https://media.istockphoto.com/id/170464921/photo/beautiful-sunrise-at-misty-morning-mountains.webp?b=1&s=612x612&w=0&k=20&c=crB_Mt0Cx2r-fFW5dzZx2gb8NiAeuO1cKfFcsI2Rit8=" alt="img"></li>
+            <li><img id="photoshop3" class="img" width=100px" height="100px" src="https://media.istockphoto.com/id/1356512120/photo/beautiful-landscape-of-top-station-munnar.webp?b=1&s=612x612&w=0&k=20&c=EEf9yclQa19qNJbtIqg__hYpP27L0crYzllDcU6Xfpo=" alt="img"></li>
+            <li><img id="photoshop4" class="img" width=100px" height="100px" src="https://plus.unsplash.com/premium_photo-1683121059986-dd9d54e4b9bf?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aGlsbHMlMjBhbmQlMjBtb3VudGFpbnN8ZW58MHx8MHx8fDA%3D" alt="img"></li>
+            <li><img id="photoshop5" class="img" width=100px" height="100px" src="https://images.unsplash.com/photo-1674342590831-f8cc995f5aad?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGlsbHMlMjBhbmQlMjBtb3VudGFpbnN8ZW58MHx8MHx8fDA%3D" alt="img"></li>
+            <li><img id="photoshop6" class="img" width=100px" height="100px" src="https://images.unsplash.com/photo-1684255769786-2efb8eb8b819?q=80&w=905&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img"></li>
+            <li><a style="color: rgb(246, 246, 251);" href="google.com">hello</a></li>
+        </ul>
+
+
+    </div>
+</body>
+<script>
+    // document.getElementById('photoshop2').onclick = function(){
+    //     alert("hello");
+    // }
+
+    document.querySelector("ul").addEventListener("click", function(e){
+        // console.log(e);
+        // console.log(e.x);
+        // console.log(e.y
+        // );
+        console.log(e.target.id);
+
+        if (e.target.tagName === "IMG") {
+            const remove= e.target.parentNode;
+            remove.remove();
+            
+        }
+        
+        // const remove= e.target.parentNode;
+
+        // method to removing Element
+        // method 1
+
+        // remove.remove();
+
+
+        // method 2
+
+
+        // remove.parentNode.removeChild(remove);
+        
+
+
+
+
+    },false)
+
+    document.querySelector("a").addEventListener("click", function(e){
+        e.preventDefault();
+        console.log("anchore tag clicked")
+    })
+</script>
+</html>
